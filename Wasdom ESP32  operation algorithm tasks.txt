@@ -1,0 +1,31 @@
+Connect ESP32 to Arduino
+Programming environments:
+Arduino IDE: https://randomnerdtutorials.com/projects-esp32/
+Preparing the ESP32 Board in the Arduino IDE:
+Windows: https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
+steps:
+
+1- The first step is to download the Arduino IDE, install and purchase the ESP32 Wasdom plug the
+2- Open the Arduino IDE and then the link. We know the port if we can download the library
+3- File -> Preferences -> Settings
+4- https://dl.espressif.com/dl/package_esp32_index.json
+5- Go to Tools->Board: "Arduino Uno" -> Boards Manager -> From the search bar type "esp32" -> click install
+6- Go to Tools->Board: “Arduino Uno”->Select the name of the ESP32 Arduino->Now connect the widget to your .wire USB -> WEMOS D1 MINI ESP32
+7- Go to Tools -> Port and select COM port: “COM3” -> COM3 write the code arduion 
+https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
+*/
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+8- We want to turn on the ESP lighting  file -> examples-> 01.Basics ->Blink 
